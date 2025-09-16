@@ -1,0 +1,46 @@
+//DISKON
+
+def hitung_total(harga, jumlah, diskon=0):
+    total = harga * jumlah
+    total -= total * (diskon / 100)
+    return total
+
+harga = int(input("Masukkan harga barang : "))
+jumlah = int(input("Masukkan jumlah barang : "))
+diskon = int(input("Masukkan diskon (%) : "))
+
+total_belanja = hitung_total(harga, jumlah, diskon)
+print("Total belanja = Rp {:,.0f}".format(total_belanja).replace(",", "."))
+
+
+
+//DERAJAT
+
+def c_to_f(c):
+    f =    (9/5 * c) + 32
+    return     f
+
+def f_to_c(f):
+    c =    (f - 32) * 5 / 9
+    return     c
+
+
+import derajat
+import os
+
+os.system("cls")
+# os.system("clear")
+print("derajat suhu")
+print("1.Celcius ke Fahrenheit")
+print("2.fahrenheit ke Celcius")
+
+pilihan = int(input("pilih:"))
+if (pilihan == 1):
+    celcius = float(input("masukkan suhu dalam celcius: "))
+    suhu = derajat.c_to_f(celcius)
+    print(f"suhu dalam fahrenheit adalah {suhu}")
+
+elif (pilihan == 2):
+    fahrenheit = float(input("masukkan suhu dalam fahrenheit:"))
+    suhu = derajat.f_to_c(fahrenheit)
+    print(f"suhu dalam celcius adalah {suhu}")
